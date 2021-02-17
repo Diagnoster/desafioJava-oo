@@ -4,15 +4,20 @@ import java.util.Scanner;
 
 public class RemoteControl {
 	
-	 int changeChannel;	
-	 int lessVolume;
-	 int moreVolume;
+	@SuppressWarnings("unused")
+	private String name;
+	@SuppressWarnings("unused")
+	private int changeChannel;	
+	@SuppressWarnings("unused")
+	private int lessVolume;
+	@SuppressWarnings("unused")
+	private int moreVolume;
 	 
-	 public RemoteControl() {
-		 
+	 public RemoteControl(String name) {
+		 this.name = name;
 	 }
 	
-	  static void toChangeChannel(Televisao tv) {
+	  public void toChangeChannel(Televisao tv) {
 		  Scanner input = new Scanner(System.in);
 		  System.out.println("Digite um canal desejado: ");
 		  int number = input.nextInt();
@@ -21,7 +26,7 @@ public class RemoteControl {
 		  input.close();
 	 }
 	  
-	 static void turnUpTheVolume(Televisao tv) {
+	 public void turnUpTheVolume(Televisao tv) {
 		 tv.setVolume(tv.getVolume()+1);
 		 if(tv.getVolume() <= 50) {
 			 System.out.println("Volume está em: " + tv.getVolume());
@@ -30,7 +35,7 @@ public class RemoteControl {
 		 }
 	 }
 	 
-	 static void lowerVolume(Televisao tv) {
+	 public void lowerVolume(Televisao tv) {
 		 tv.setVolume(tv.getVolume()-1);
 		 if(tv.getVolume() > 0) {
 			 System.out.println("Volume está em: " + tv.getVolume());
@@ -39,7 +44,7 @@ public class RemoteControl {
 		 }
 	 }
 	 
-	 static void statusTv (Televisao tv) {
+	 public void statusTv (Televisao tv) {
 		 System.out.println("Sua tv está no canal " + tv.getCanais() + " e no volume " + tv.getVolume());
 	 }
 	

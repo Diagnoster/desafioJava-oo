@@ -5,13 +5,14 @@ public class Teste {
 	public static void main(String[] args) {
 	
 		Televisao tv = new Televisao(12, 20);
+		RemoteControl samsung = new RemoteControl("Samsung");
 		
-		RemoteControl.toChangeChannel(tv);
-		RemoteControl.turnUpTheVolume(tv);
-		RemoteControl.lowerVolume(tv);
-		RemoteControl.lowerVolume(tv);
-		RemoteControl.turnUpTheVolume(tv);
-		RemoteControl.statusTv(tv);
+		samsung.toChangeChannel(tv);
+		samsung.turnUpTheVolume(tv);
+		samsung.lowerVolume(tv);
+		samsung.lowerVolume(tv);
+		samsung.turnUpTheVolume(tv);
+		samsung.statusTv(tv);
 
 	
 	}

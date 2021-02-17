@@ -12,40 +12,40 @@ public class Elevador {
 		this.capacity = capacity;
 	}
 	
-	static void access(Elevador elevador) {
-		if(elevador.getCapacity() < 4 && elevador.getCapacity() >= 0) {
-			elevador.setCapacity(elevador.getCapacity() + 1);
-			System.out.println(elevador.getCapacity() + " pessoa(s) esta(ão) no elevador");
+	public void access() {
+		if(this.getCapacity() < 4 && this.getCapacity() >= 0) {
+			this.setCapacity(this.getCapacity() + 1);
+			System.out.println(this.getCapacity() + " pessoa(s) esta(ão) no elevador");
 		} else {
 			System.out.println("Capacidade máxima atingida!");
 		}
 	}
 	
-	static void leave(Elevador elevador) {
-		if(elevador.getCapacity() >= 1) {
-			elevador.setCapacity(elevador.getCapacity() - 1);
-			System.out.println(elevador.getCapacity() + " pessoa(s) esta(ão) no elevador");
+	public void leave() {
+		if(this.getCapacity() >= 1) {
+			this.setCapacity(this.getCapacity() - 1);
+			System.out.println(this.getCapacity() + " pessoa(s) esta(ão) no elevador");
 		} else {
 			System.out.println("Elevador está vazio! ");
 		}
 	}
 	
-	static void rise(Elevador elevador) {
-		if(elevador.getCurrentFloor() >= 0 && elevador.getCurrentFloor() < 5) {
-			elevador.setCurrentFloor(elevador.getCurrentFloor() + 1);
-			System.out.println("Você está no andar " + elevador.getCurrentFloor());
-		} else if (elevador.getCurrentFloor() == 5){
+	public void rise() {
+		if(this.getCurrentFloor() >= 0 && this.getCurrentFloor() < 5) {
+			this.setCurrentFloor(this.getCurrentFloor() + 1);
+			System.out.println("Você está no andar " + this.getCurrentFloor());
+		} else if (this.getCurrentFloor() == 5){
 			System.out.println("Você já esta no último andar!");
 		} 
 	}
 	
-	static void down(Elevador elevador) {
-		if(elevador.getCurrentFloor() > 0) {
-			elevador.setCurrentFloor(elevador.getCurrentFloor() - 1);
-			if(elevador.getCurrentFloor() == 0) {
+	public void down() {
+		if(this.getCurrentFloor() > 0) {
+			this.setCurrentFloor(this.getCurrentFloor() - 1);
+			if(this.getCurrentFloor() == 0) {
 				System.out.println("Você está no térreo! ");
 			} else {
-				System.out.println("Você está no andar " + elevador.getCurrentFloor());
+				System.out.println("Você está no andar " + this.getCurrentFloor());
 			}
 		} else {
 			System.out.println("Você está no térreo, impossível descer mais!");
